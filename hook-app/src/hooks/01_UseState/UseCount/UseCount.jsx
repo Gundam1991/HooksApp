@@ -7,11 +7,11 @@ export const UseCount = () => {
   // const [counter, setCounter] = useState(0);
 
   //CUSTOM HOOKS
-  const {count,key,props,type} = useCounter();
-  console.log(count);
+  const {counter, increment, decrement, reset} = useCounter();
+
   return (
     <>
-      <h1>Counter:{count}</h1> 
+      <h1>Counter:{counter}</h1> 
       <hr />
       <div>
         <button
@@ -21,7 +21,7 @@ export const UseCount = () => {
           //Hooks Clasic
           // onClick={() => setCounter(counter+1)}
           //Hooks Custom
-          onClick={key}
+          onClick={increment}
         >
           +1
         </button>
@@ -31,7 +31,7 @@ export const UseCount = () => {
            //Hooks Clasic
           // onClick={() => setCounter(counter-1)}
           //Hooks Custom
-          onClick={props}
+          onClick={decrement}
           style={{ marginRight: 10 }}
         >   
             -1   
@@ -42,7 +42,7 @@ export const UseCount = () => {
            //Hooks Clasic
           // onClick={() => setCounter(0)}
           //Hooks Custom
-          onClick={type} 
+          onClick={reset} 
         >
             Resset   
         </button>

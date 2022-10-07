@@ -4,13 +4,21 @@ import './index.css';
 import { HookApp } from './HooksApp';
 import { CounterApp } from './hooks/01_UseState/CounterApp';
 import { UseCount } from './hooks/01_UseState/UseCount/UseCount';
+import { SimpleForm } from './hooks/01_useEffect/simpleForm';
 import reportWebVitals from './reportWebVitals';
+import { MultipleCustomHooks } from './03_Examples/MultipleCustomHooks';
+import { FocusScreen } from './hooks/useRef/FocusScreen';
+import { Layout } from './hooks/useLayoutEffect/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <HookApp/> */}
-    <UseCount/>  
+    {/* <UseCount/>   */}
+    {/* <SimpleForm/> */}
+    {/* <MultipleCustomHooks/> */}
+    {/* <FocusScreen/> */}
+    <Layout/>
   </React.StrictMode>
 );
 
